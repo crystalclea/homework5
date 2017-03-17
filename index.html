@@ -1,1 +1,95 @@
+<!DOCTYPE html>
+<html>
 
+<head>
+  
+  <meta charset="utf-8">
+    <title>ECharts</title>
+    <!-- Use echarts.js -->
+    <script src="echarts.min.js"></script>
+  
+  </head>
+  
+  <body>
+    <script type="text/javascript">
+        // Initialse eCharts
+      
+    <h1 class="charts--headline">City of Waste<br>How Hong Kong's wasted</h1>
+<div class="charts--container">
+  <ul>
+    <li class="chart">
+      <h3 class="chart--subHeadline">Chart 1</h3>
+      <h2 class="chart--headline">Composition of our waste in Hong Kong - 2015</h2>
+      <div id="pieChart">
+       
+        option = {
+    title : {
+        text: 'Average solid waste quantities by type',
+        subtext: '2015',
+        x:'center'
+    },
+    tooltip : {
+        trigger: 'item',
+        formatter: "{a} <br/>{b} : {c} ({d}%)"
+    },
+    legend: {
+        orient: 'vertical',
+        left: 'left',
+        data: ['Domestic','Commerical','Industrial','Construction','Special Waste']
+    },
+    series : [
+        {
+            name: 'Average solid waste quantities by type',
+            type: 'pie',
+            radius : '55%',
+            center: ['50%', '60%'],
+            data:[
+                {value:6460, name:'Domestic'},
+                {value:2800, name:'Commerical'},
+                {value:890, name:'Industrial'},
+                {value:4200, name:'Construction'},
+                {value:740, name:'Special Waste'}
+            ],
+            itemStyle: {
+                emphasis: {
+                    shadowBlur: 10,
+                    shadowOffsetX: 0,
+                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
+            }
+        }
+    ]
+};
+        
+  // Use the option to display chart
+        var myChart1 = echarts.init(document.getElementById('mybar'));
+        myChart1.setOption(option);
+    </script>
+
+
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('mymap'));
+      
+        
+        
+ </div>
+    </li>
+    <li class="chart">
+      <h3 class="chart--subHeadline">Chart 2</h3>
+      <h2 class="chart--headline">Area Label Would Go Here</h2>
+      <div id="lineChart">
+        <svg id="lineChartSVG" class="lineChart--svg">
+          <defs>
+            <linearGradient id="lineChart--gradientBackgroundArea" x1="0" x2="0" y1="0" y2="1">
+              <stop class="lineChart--gradientBackgroundArea--top" offset="0%" />
+              <stop class="lineChart--gradientBackgroundArea--bottom" offset="100%" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+    </li>
+  </ul>
+</div>
+  </body>
+</html>
