@@ -1,0 +1,275 @@
+{
+    "timeline": {
+        "data": [
+            "2004", "2005", {
+                "name": "2006",
+                "symbol": "emptyStar6",
+                "symbolSize": "10"
+            }, "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014"
+
+        ],
+        "type": "number",
+        "symbolRotate": "30",
+        "playInterval": "1000",
+        "loop": true,
+        "autoplay": true,
+        "symbol": "circle"
+    },
+
+    "options": [{
+            "title": {
+                "text": "能源使用按類別劃分(百分比)",
+                "subtext": "<2004-2014>"
+            },
+            "color": ["cadetblue", "yellow", "green", "saddlebrown", "palegoldenrod"],
+            "tooltip": {
+                "trigger": "item",
+                "formatter": "{a} 年份{b} : {c} (%)"
+            },
+
+            "legend": {
+                "data": ["住宅", "商業", "工業", "運輸"]
+            },
+
+            "toolbox": {
+                "show": true,
+                "feature": {
+                    "mark": {
+                        "show": true
+                    },
+                    "dataView": {
+                        "show": true,
+                        "readOnly": false
+                    },
+                    "magicType": {
+                        "show": true,
+                        "type": ["pie", "funnel"],
+                        "options": {
+                            "funnel": {
+                                "x": "25%",
+                                "width": "50%",
+                                "funnelAlign": "left",
+                                "max": 1700
+                            }
+                        }
+                    },
+                    "restore": {
+                        "show": true
+                    },
+                    "saveAsImage": {
+                        "show": true
+                    }
+                }
+            },
+            "series": [{
+                "name": "2004",
+                "type": "pie",
+                "center": ["50%", "45%"],
+                "radius": "50%",
+                "data": [{
+                    "value": "19",
+                    "name": "住宅"
+                }, {
+                    "value": "38",
+                    "name": "商業"
+                }, {
+                    "value": "7",
+                    "name": "工業"
+                }, {
+                    "value": "36",
+                    "name": "運輸"
+                }]
+            }]
+        },
+        {
+            "series": [{
+                "name": "2005",
+                "type": "pie",
+                "data": [{
+                    "value": "20",
+                    "name": "住宅"
+                }, {
+                    "value": "38",
+                    "name": "商業"
+                }, {
+                    "value": "7",
+                    "name": "工業"
+                }, {
+                    "value": "35",
+                    "name": "運輸"
+                }]
+            }]
+        },
+        {
+            "series": [{
+                "name": "2006",
+                "type": "pie",
+                "data": [{
+                    "value": "19",
+                    "name": "住宅"
+                }, {
+                    "value": "40",
+                    "name": "商業"
+                }, {
+                    "value": "7",
+                    "name": "工業"
+                }, {
+                    "value": "34",
+                    "name": "運輸"
+                }]
+            }]
+        },
+        {
+            "series": [{
+                "name": "2007",
+                "type": "pie",
+                "data": [{
+                    "value": "19",
+                    "name": "住宅"
+                }, {
+                    "value": "40",
+                    "name": "商業"
+                }, {
+                    "value": "7",
+                    "name": "工業"
+                }, {
+                    "value": "34",
+                    "name": "運輸"
+                }]
+            }]
+        },
+        {
+            "series": [{
+                "name": "2008",
+                "type": "pie",
+                "data": [{
+                    "value": "19",
+                    "name": "住宅"
+                }, {
+                    "value": "40",
+                    "name": "商業"
+                }, {
+                    "value": "7",
+                    "name": "工業"
+                }, {
+                    "value": "34",
+                    "name": "運輸"
+                }]
+            }]
+        },
+        {
+            "series": [{
+                "name": "2009",
+                "type": "pie",
+                "data": [{
+                    "value": "21",
+                    "name": "住宅"
+                }, {
+                    "value": "41",
+                    "name": "商業"
+                }, {
+                    "value": "6",
+                    "name": "工業"
+                }, {
+                    "value": "33",
+                    "name": "運輸"
+                }]
+            }]
+        },
+        {
+            "series": [{
+                "name": "2010）",
+                "type": "pie",
+                "data": [{
+                    "value": "21",
+                    "name": "住宅"
+                }, {
+                    "value": "41",
+                    "name": "商業"
+                }, {
+                    "value": "6",
+                    "name": "工業"
+                }, {
+                    "value": "33",
+                    "name": "運輸"
+                }]
+            }]
+        },
+        {
+            "series": [{
+                "name": "2011",
+                "type": "pie",
+                "data": [{
+                    "value": "21",
+                    "name": "住宅"
+                }, {
+                    "value": "42",
+                    "name": "商業"
+                }, {
+                    "value": "5",
+                    "name": "工業"
+                }, {
+                    "value": "32",
+                    "name": "運輸"
+                }]
+            }]
+        },
+        {
+            "series": [{
+                "name": "2012",
+                "type": "pie",
+                "data": [{
+                    "value": "21",
+                    "name": "住宅"
+                }, {
+                    "value": "42",
+                    "name": "商業"
+                }, {
+                    "value": "5",
+                    "name": "工業"
+                }, {
+                    "value": "32",
+                    "name": "運輸"
+                }]
+            }]
+        },
+        {
+            "series": [{
+                "name": "2013",
+                "type": "pie",
+                "data": [{
+                    "value": "21",
+                    "name": "住宅"
+                }, {
+                    "value": "42",
+                    "name": "商業"
+                }, {
+                    "value": "5",
+                    "name": "工業"
+                }, {
+                    "value": "32",
+                    "name": "運輸"
+                }]
+            }]
+        },
+        {
+            "series": [{
+                "name": "2014",
+                "type": "pie",
+                "data": [{
+                    "value": "22",
+                    "name": "住宅"
+                }, {
+                    "value": "42",
+                    "name": "商業"
+                }, {
+                    "value": "5",
+                    "name": "工業"
+                }, {
+                    "value": "31",
+                    "name": "運輸"
+                }]
+            }]
+        }
+    ]
+}
