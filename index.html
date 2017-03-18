@@ -1,178 +1,40 @@
+<!DOCTYPE html>
 <html>
-
 <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <meta charset="utf-8">
-    <title>Homework 5</title>
+    <title>ECharts</title>
+    <!-- 引入 echarts.js -->
     <script src="echarts.min.js"></script>
-    <style>
-
-    </style>
 </head>
-
 <body>
-    
-  <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
     <div id="main" style="width: 600px;height:400px;"></div>
     <script type="text/javascript">
         // 基于准备好的dom，初始化echarts实例
         var myChart = echarts.init(document.getElementById('main'));
 
-        
-    <div class="container">
-        <h1 style="text-align: center">City of Waste - Landfills are filling up and fast</h1><br>
- 
-        <a href="https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-solid-waste/resource/08a9564b-e672-420d-93e4-df7d07a97a1f">
-            <p style="text-align: right">Source: Census and Statistics Department</p>
-        </a>
-        <hr>
-        <div class="col-xs-12" id="main1" style="width: 1200px;height:500px;"></div>
-        <br>
-        <div class="col-xs-12" id="main2" style="width: 1200px;height:400px;"></div>
-        <br>
-        <hr>
-        <div class="col-xs-12" id="main3" style="width: 1200px;height:600px;"></div>
+        // 指定图表的配置项和数据
+        var option = {
+            title: {
+                text: 'ECharts 入门示例'
+            },
+            tooltip: {},
+            legend: {
+                data:['销量']
+            },
+            xAxis: {
+                data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
+            },
+            yAxis: {},
+            series: [{
+                name: '销量',
+                type: 'bar',
+                data: [5, 20, 36, 10, 10, 20]
+            }]
+        };
 
-    </div>
-    <!--<a href="https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-solid-waste/resource/08a9564b-e672-420d-93e4-df7d07a97a1f" gihs ".html"></a>-->
-
-    <script type="text/javascript">
-        $(function() {
-            var myChart1 = echarts.init(document.getElementById('main1'));
-
-            var colors = ['#5793f3', '#d14a61', '#675bba', '#cf55b4', '#d8bf31', '#111110'];
-
-            option = {
-                color: colors,
-
-                title: {
-                    text: 'Average waste quantities by type'
-                },
-                tooltip: {
-                    trigger: 'axis'
-                },
-                grid: {
-                    right: '20%'
-                },
-                toolbox: {
-                    feature: {
-                        dataView: {
-                            show: true,
-                            readOnly: false
-                        },
-                        restore: {
-                            show: true
-                        },
-                        saveAsImage: {
-                            show: true
-                        }
-                    }
-                },
-                legend: {
-                    data: ['Domestic', 'Commerical', 'Industrial', 'Construction', 'Special waste']
-                },
-                xAxis: [{
-                    type: 'category',
-                    axisTick: {
-                        alignWithLabel: true
-                    },
-                    data: ['2004', '2005', '2009', '2010', '2011', '2012', '2013', '2014']
-                }],
-                yAxis: [{
-                    type: 'value',
-                    name: 'Tonnes/day',
-                    min: 0,
-                    max: 8000,
-                    position: 'left',
-                    axisLine: {
-                        lineStyle: {
-                            color: colors[4]
-                        }
-                    },
-                    axisLabel: {
-                        formatter: '{value} TJ'
-                    }
-                }, {
-                    type: 'value',
-                    name: 'Total',
-                    min: 12000,
-                    max: 18000,
-                    position: 'right',
-                    axisLine: {
-                        lineStyle: {
-                            color: colors[5]
-                        }
-                    },
-                    splitLine: false,
-                    axisLabel: {
-                        formatter: '{value} TJ'
-                    }
-                }],
-                series: [{
-                    name: 'Domestic',
-                    type: 'bar',
-                    data: [7 014, 6828, 6015, 6135, 5973, 6286, 6359 , 6418, 6460]
-                }, {
-                    name: 'Commerical',
-                    type: 'bar',
-                    yAxisIndex: 0,
-                    data: [1673, 1895, 2319, 2352, 2360, 2260, 2408, 2565, 2800]
-                }, {
-                    name: 'Industrial',
-                    type: 'bar',
-                    yAxisIndex: 0,
-                    data: [601, 654, 629, 627, 663, 732, 780, 799, 890]
-                }, {
-                    name: 'Construction',
-                    type: 'bar',
-                    yAxisIndex: 0,
-                    data: [6 595, 6 556, 3 121, 3 584, 3 331, 3 440, 3 591, 3 942, 4 200]
-            }, {
-                    name: 'Special waste',
-                    type: 'bar',
-                    yAxisIndex: 0,
-                    data: [1 620, 1 746, 1 243, 1 119, 1 131, 1 127, 1 173, 1 135, 740]
-                }, {
-                    name: 'Total',
-                    type: 'line',
-                    yAxisIndex: 1,
-                    color: colors[5],
-                    data: [17 503, 17 679, 13 326, 13 817, 13 458, 13 844, 14 311, 14 859, 15 100],
-                    markPoint: {
-                        data: [{
-                            type: "max",
-                            name: "Most wasted",
-                            symbol: "rect",
-                            symbolSize: [50, 15],
-                            label: {
-                                formatter: '{b}: \n{c}'
-                            }
-                        }, {
-                            type: "min",
-                            name: "Least wasted",
-                            symbol: "rect",
-                            symbolSize: [50, 15],
-                            label: {
-                                formatter: '{b}: \n{c}'
-                            }
-                        }]
-                    }
-                }]
-            };
-            myChart1.setOption(option);
-        });
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
     </script>
-
-    
-   
-    <footer>
-
-    </footer>
-    <!--jquery-3-->
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 </body>
+</html>
