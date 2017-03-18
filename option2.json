@@ -18,17 +18,17 @@
 
     "options": [{
             "title": {
-                "text": "能源使用按類別劃分(百分比)",
+                "text": "Average quantities of waste by type",
                 "subtext": "<2004-2014>"
             },
             "color": ["cadetblue", "yellow", "green", "saddlebrown", "palegoldenrod"],
             "tooltip": {
                 "trigger": "item",
-                "formatter": "{a} 年份{b} : {c} (%)"
+                "formatter": "{a} Year {b} : {c} (%)"
             },
 
             "legend": {
-                "data": ["住宅", "商業", "工業", "運輸"]
+                "data": ["Domestic", "Commercial", "Industrial", "Construction", "Special waste"]
             },
 
             "toolbox": {
@@ -68,16 +68,19 @@
                 "radius": "50%",
                 "data": [{
                     "value": "19",
-                    "name": "住宅"
+                    "name": "Domestic"
                 }, {
                     "value": "38",
-                    "name": "商業"
+                    "name": "Commercial"
                 }, {
                     "value": "7",
-                    "name": "工業"
+                    "name": "Industrial"
                 }, {
                     "value": "36",
-                    "name": "運輸"
+                    "name": "Construction"
+                }, {
+                    "value": "36",
+                    "name": "Special waste"
                 }]
             }]
         },
@@ -87,16 +90,19 @@
                 "type": "pie",
                 "data": [{
                     "value": "20",
-                    "name": "住宅"
+                    "name": "Domestic"
                 }, {
                     "value": "38",
-                    "name": "商業"
+                    "name": "Commerical"
                 }, {
                     "value": "7",
-                    "name": "工業"
+                    "name": "Industrial"
                 }, {
                     "value": "35",
-                    "name": "運輸"
+                    "name": "Construction"
+                     }, {
+                    "value": "60",
+                    "name": "Special waste"
                 }]
             }]
         },
@@ -106,16 +112,19 @@
                 "type": "pie",
                 "data": [{
                     "value": "19",
-                    "name": "住宅"
+                    "name": "Domestic"
                 }, {
                     "value": "40",
-                    "name": "商業"
+                    "name": "Commercial"
                 }, {
                     "value": "7",
-                    "name": "工業"
+                    "name": "Industrial"
                 }, {
                     "value": "34",
-                    "name": "運輸"
+                    "name": "Construction"
+                     }, {
+                    "value": "34",
+                    "name": "Special waste"
                 }]
             }]
         },
@@ -125,16 +134,19 @@
                 "type": "pie",
                 "data": [{
                     "value": "19",
-                    "name": "住宅"
+                    "name": "Domestic"
                 }, {
                     "value": "40",
-                    "name": "商業"
+                    "name": "Commercial"
                 }, {
                     "value": "7",
-                    "name": "工業"
+                    "name": "Industrial"
                 }, {
                     "value": "34",
-                    "name": "運輸"
+                    "name": "Construction"
+                    }, {
+                    "value": "34",
+                    "name": "Special waste"
                 }]
             }]
         },
@@ -144,16 +156,19 @@
                 "type": "pie",
                 "data": [{
                     "value": "19",
-                    "name": "住宅"
+                    "name": "Domestic"
                 }, {
                     "value": "40",
-                    "name": "商業"
+                    "name": "Commercial"
                 }, {
                     "value": "7",
-                    "name": "工業"
+                    "name": "Industrial"
                 }, {
                     "value": "34",
-                    "name": "運輸"
+                    "name": "Construction"
+                    }, {
+                    "value": "36",
+                    "name": "Special waste"
                 }]
             }]
         },
@@ -163,16 +178,19 @@
                 "type": "pie",
                 "data": [{
                     "value": "21",
-                    "name": "住宅"
+                    "name": "Domestic
                 }, {
                     "value": "41",
-                    "name": "商業"
+                    "name": "Commercial"
                 }, {
                     "value": "6",
-                    "name": "工業"
+                    "name": "Industrial"
                 }, {
                     "value": "33",
-                    "name": "運輸"
+                    "name": "Construction"
+                    }, {
+                    "value": "33",
+                    "name": "Special waste"
                 }]
             }]
         },
@@ -182,16 +200,19 @@
                 "type": "pie",
                 "data": [{
                     "value": "21",
-                    "name": "住宅"
+                    "name": "Domestic"
                 }, {
                     "value": "41",
-                    "name": "商業"
+                    "name": "Commercial"
                 }, {
                     "value": "6",
-                    "name": "工業"
+                    "name": "Industrial"
                 }, {
                     "value": "33",
-                    "name": "運輸"
+                    "name": "Construction"
+                       }, {
+                    "value": "33",
+                    "name": "Special waste"
                 }]
             }]
         },
@@ -201,16 +222,19 @@
                 "type": "pie",
                 "data": [{
                     "value": "21",
-                    "name": "住宅"
+                    "name": "Domestic"
                 }, {
                     "value": "42",
-                    "name": "商業"
+                    "name": "Commercial"
                 }, {
                     "value": "5",
-                    "name": "工業"
+                    "name": "Industrial"
                 }, {
                     "value": "32",
-                    "name": "運輸"
+                    "name": "Consturction"
+                       }, {
+                    "value": "33",
+                    "name": "Special waste"
                 }]
             }]
         },
