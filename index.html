@@ -8,7 +8,7 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <meta charset="utf-8">
-    <title>Roytang's howework5</title>
+    <title>Homework 5</title>
     <script src="echarts.min.js"></script>
     <style>
 
@@ -17,10 +17,10 @@
 
 <body>
     <div class="container">
-        <h1 style="text-align: center">2004年－2014年香港能源用途</h1><br>
-        <h3 style="text-align: right">By Roytang</h3>
-        <a href="https://data.gov.hk/tc-data/dataset/hk-emsd-emsd1-energy-end-use-data">
-            <p style="text-align: right">via (Electrical and Mechanical Services Department)data.gov.hk</p>
+        <h1 style="text-align: center">City of Waste - Landfills are filling up and fast</h1><br>
+ 
+        <a href="https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-solid-waste/resource/08a9564b-e672-420d-93e4-df7d07a97a1f">
+            <p style="text-align: right">Source: Census and Statistics Department</p>
         </a>
         <hr>
         <div class="col-xs-12" id="main1" style="width: 1200px;height:500px;"></div>
@@ -31,7 +31,7 @@
         <div class="col-xs-12" id="main3" style="width: 1200px;height:600px;"></div>
 
     </div>
-    <!--<a href="http://www.map.gov.hk/static/z/tw/" gihs ".html"></a>-->
+    <!--<a href="https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-solid-waste/resource/08a9564b-e672-420d-93e4-df7d07a97a1f" gihs ".html"></a>-->
 
     <script type="text/javascript">
         $(function() {
@@ -43,7 +43,7 @@
                 color: colors,
 
                 title: {
-                    text: '能源使用按類別劃分'
+                    text: 'Average waste quantities by type'
                 },
                 tooltip: {
                     trigger: 'axis'
@@ -66,20 +66,20 @@
                     }
                 },
                 legend: {
-                    data: ['住宅', '商業', '工業', '運輸', '總計']
+                    data: [Domestic', 'Commerical', 'Industrial', 'Construction', 'Special waste']
                 },
                 xAxis: [{
                     type: 'category',
                     axisTick: {
                         alignWithLabel: true
                     },
-                    data: ['2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014']
+                    data: ['2004', '2005', '2009', '2010', '2011', '2012', '2013', '2014']
                 }],
                 yAxis: [{
                     type: 'value',
-                    name: '能源使用<單位：太焦耳>',
+                    name: 'Tonnes/day',
                     min: 0,
-                    max: 140000,
+                    max: 8000,
                     position: 'left',
                     axisLine: {
                         lineStyle: {
@@ -91,9 +91,9 @@
                     }
                 }, {
                     type: 'value',
-                    name: '總計',
-                    min: 270000,
-                    max: 290000,
+                    name: 'Total',
+                    min: 12000,
+                    max: 18000,
                     position: 'right',
                     axisLine: {
                         lineStyle: {
@@ -106,34 +106,39 @@
                     }
                 }],
                 series: [{
-                    name: '住宅',
+                    name: 'Domestic',
                     type: 'bar',
-                    data: [53053, 54759, 53982, 54717, 55849, 57731, 58396, 59544, 60888, 59459, 62958]
+                    data: [7 014, 6828, 6015, 6135, 5973, 6286, 6359 , 6418, 6460]
                 }, {
-                    name: '商業',
-                    type: 'bar',
-                    yAxisIndex: 0,
-                    data: [105800, 107281, 111884, 113914, 113753, 114297, 116391, 117663, 119843, 119965, 121480]
-                }, {
-                    name: '工業',
+                    name: 'Commerical',
                     type: 'bar',
                     yAxisIndex: 0,
-                    data: [20686, 19809, 18934, 17645, 17332, 16129, 16053, 14735, 14727, 14588, 14723]
+                    data: [1673, 1895, 2319, 2352, 2360, 2260, 2408, 2565, 2800]
                 }, {
-                    name: '運輸',
+                    name: 'Industrial',
                     type: 'bar',
                     yAxisIndex: 0,
-                    data: [100776, 98689, 96404, 96165, 94504, 90643, 90889, 90774, 90423, 90198, 89999]
+                    data: [601, 654, 629, 627, 663, 732, 780, 799, 890]
                 }, {
-                    name: '總計',
+                    name: 'Construction',
+                    type: 'bar',
+                    yAxisIndex: 0,
+                    data: [6 595, 6 556, 3 121, 3 584, 3 331, 3 440, 3 591, 3 942, 4 200]
+            }, {
+                    name: 'Special waste',
+                    type: 'bar',
+                    yAxisIndex: 0,
+                    data: [1 620, 1 746, 1 243, 1 119, 1 131, 1 127, 1 173, 1 135, 740]
+                }, {
+                    name: 'Total',
                     type: 'line',
                     yAxisIndex: 1,
                     color: colors[5],
-                    data: [280315, 280537, 281204, 282440, 281438, 278799, 281729, 282716, 285881, 284210, 289160],
+                    data: [17 503, 17 679, 13 326, 13 817, 13 458, 13 844, 14 311, 14 859, 15 100],
                     markPoint: {
                         data: [{
                             type: "max",
-                            name: "能源使用最大值",
+                            name: "Most wasted",
                             symbol: "rect",
                             symbolSize: [50, 15],
                             label: {
@@ -141,7 +146,7 @@
                             }
                         }, {
                             type: "min",
-                            name: "能源使用最小值",
+                            name: "Least wasted",
                             symbol: "rect",
                             symbolSize: [50, 15],
                             label: {
