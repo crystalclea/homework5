@@ -1,7 +1,7 @@
 <html>
     <head>
     <meta charset="utf-8">
-    <title>Homework 5</title>
+    <title>Crystal</title>
     <!-- Use echarts.js -->
     <script src="echarts.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -12,21 +12,32 @@
 <body>
     <header>
 		<div id="banner">
-		<h1 style=text-align:center;font-size:80px;color:white> Daniel Ma</h1> 
+		<h1 style=text-align:center;font-size:80px;color:white>Aids in Hong Kong</h1> 
 		<h2 style=text-align:center;font-size:60px;color:white;font-family:Time; > Homework 5 </h2>
 		</div> 
     </header>
     
-	<p1 style= "font-size:30px"> About health of men and women in Hong Kong</p1><br>
-	<p2 style= "font-size:15px"> There has been an increase of quality of lives in Hong Kong, resulting in people living longer lives. At the same time, birth rates and death rates have experienced changes over the past few decades. </p2>
+	<p1 style= "font-size:30px">New HIV infections in Hong Kong show slight decrease in 2016 </p1><br>
+	<p2 style= "font-size:15px"> The year 2016 marks a drop in the number of AIDs cases reported as compared to the
+		previous year - a relief to aids concern groups.
+		<br>
+		Over the years, the number of HIV cases continued to rise. A total of 725 new cases of HIV infections were reported back in 2015, a 11.4 per 
+		cent increase from the 651 in 2014.
+		<br>
+		More than half of the new HIV infections in 2016 were contracted via homosexual intercourse, 
+		mainly amongst young gay men, based on government statistics.
+		<br>
+		A significant portion of HIV-positive men had used drugs while engaging in sexual intercourse, 
+		increasing the risk of unprotected sex, according to survey data obtained last year from patients 
+		visiting specialist clinics.
+	</p2>
+	<br>
 	
 	<div id="main1" style="width:900px; height:500px;"></div>
 	<p2 style="font-size:15px"> Life expectacy has been rising constantly. Meanwhile the life expectancy of female has always been higher than men in Hong Kong.</p2>
 	<div id="main2" style="width:900px; height:500px;"></div>
 	<p2 style="font-size:15px"> As illustrated, the death number for women is also lower than men.</p2>
 	<script type="text/javascript">
-
-
 		
         $(function(){
 		console.log("Enter Jquery Block");
@@ -38,7 +49,6 @@
        var myChart1 = echarts.init(document.getElementById('main1'));
       myChart1.setOption(option);
 	    })
-
          $.getJSON('two.json',function(data){
                 var option = data;
                 console.log(data);
