@@ -1,33 +1,61 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link href='https://rawgit.com/crystalclea/homework5/gh-pages/style.css' rel='stylesheet' type='text/css'>
-  </head>
-  <body>
-   
-    
-    
-    <article>
-  <header>
-    <h1>Super Amazing Blog Post</h1>
-    <p>By Jack Bauer on <time datetime="2013-14-11">11/14/13</time></p>
-  </header>
-  <div id="content">
-    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
-  </div>
-  <div id="share">
-    <p>Share this Post on <a href="#"><span class="brandico-facebook"></span></a>&nbsp;<a href="#"><span class="brandico-twitter-bird"></span></a>&nbsp;<a href="#"><span class="brandico-tumblr"></span></a>&nbsp;<a href="#"><span class="brandico-linkedin"></span></a></p>
-  </share>
-</article>
-    
-    
-    
-    
-    
-    
-    
-    
-  </body>
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <!-- including ECharts file -->
+    <script src="echarts.js"></script>
+</head>
+<body>
+    <!-- prepare a DOM container with width and height -->
+    <div id="main" style="width: 600px;height:400px;"></div>
+    <script type="text/javascript">
+        // based on prepared DOM, initialize echarts instance
+        var myChart = echarts.init(document.getElementById('main'));
+
+        // specify chart configuration item and data
+        var option = {
+    title : {
+        text: '某站点用户访问来源',
+        subtext: '纯属虚构',
+        x:'center'
+    },
+    tooltip : {
+        trigger: 'item',
+        formatter: "{a} <br/>{b} : {c} ({d}%)"
+    },
+    legend: {
+        orient: 'vertical',
+        left: 'left',
+        data: ['直接访问','邮件营销','联盟广告','视频广告','搜索引擎']
+    },
+    series : [
+        {
+            name: '访问来源',
+            type: 'pie',
+            radius : '55%',
+            center: ['50%', '60%'],
+            data:[
+                {value:335, name:'直接访问'},
+                {value:310, name:'邮件营销'},
+                {value:234, name:'联盟广告'},
+                {value:135, name:'视频广告'},
+                {value:1548, name:'搜索引擎'}
+            ],
+            itemStyle: {
+                emphasis: {
+                    shadowBlur: 10,
+                    shadowOffsetX: 0,
+                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
+            }
+        }
+    ]
+};
+
+
+        // use configuration item and data specified to show chart
+        myChart.setOption(option);
+    </script>
+</body>
 </html>
