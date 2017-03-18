@@ -1,11 +1,11 @@
 {
     title : {
-        text: 'Suspected route of HIV transmission',
+        text: "Suspected route of HIV transmission",
         subtext: '2015',
         x:'center'
     },
     tooltip : {
-        trigger: 'item',
+        trigger: "item",
         formatter: "{a} <br/>{b} : {c} ({d}%)"
     },
     legend: {
